@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    include:
+      - common
+      - db
+      - security
+      - logging
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+#http://localhost:8090/v3/api-docs
+#http://localhost:8090/swagger-ui.html
+
+# docker build -t imageName .
+# docker tag  ms17_image  1234agil/ms17:1
+# docker push 1234agil/ms17:1
+
+
+
+
+issue:
+  key: TGVyaWsgTGVua2VyYW4gICAxMjc4MjM2NDJoamtkYXNoZml1IGpoZiBoamZoYiA3MzR1NWkzaCAyMzU0IEJhc2U2NCBCYXNlNjQgQmFzZTY0IEJhc2U2NA==
+

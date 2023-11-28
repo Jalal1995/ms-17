@@ -1,0 +1,546 @@
+1. 09/11/2022
+- introduction microservice - monolith architecture..
+
+2. 12/09/2022  introduction GIT.
+Presentation
+git init
+git status
+git add .  add <filename>
+git commit
+git push
+git branch
+git checkout -b branch name
+git ignore
+tig/sourcetree
+git log
+
+git revert {hash}
+SUM UP
+git OP
+git rebase
+ -- To Keep a Linear Project History:
+
+
+git merge
+git tag
+git fetch
+git pull
+for more: https://jan-krueger.net/wordpress/wp-content/uploads/2007/09/git-cheat-sheet.pdf
+
+https://www.educative.io/answers/what-is-git-bisect
+https://www.metaltoad.com/blog/beginners-guide-git-bisect-process-elimination
+
+3. 19/11/2022 Design Patters.
+
+  - Creational / Singleton, Prototype, Builder, FactoryMethod, AbstractFactoryMethod
+  - Structural patterns / Adapter ( Spring Security), Proxy (Transactional)
+  - Behavioral patterns / State, chain of responsibility
+  - implement with core java some design patterns.
+
+  - Design pattern with Spring boot
+  - Bean, Qualifier, DI , IoC , Builder
+     # With bean configs
+     # Spring annotation
+
+########################################################################################################################
+4. 23/11/2022
+  - Spring  vs Spring boot architecture
+  - HTTP methods,Idenpotent
+  - GET , POST methods
+
+5. 26/11/2022
+  - Talk about microservices (5-8 minutes)
+  - What is API?
+  - What is REST API?
+  - Working with applications yaml files.
+     # properties config class
+     # Value annotation
+  - Application yaml vs properties
+     # Multi properties files.
+
+  -SOLID principles
+    -S -Single responsibility
+    -O -Open close
+    -L -Liskov substitution
+    -I -Interface segregation
+    -D -Dependency inversion
+
+6.  Rest api design  -- https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
+    - Controller vs RestController
+    - https://stackoverflow.com/questions/25242321/difference-between-spring-controller-and-restcontroller-annotation
+    - https://medium.com/@akshaypawar911/java-spring-framework-controller-vs-restcontroller-3ef2eb360917
+
+    -- Swagger implementation
+    -- https://editor.swagger.io
+    -- http://localhost:8090/v3/api-docs/
+    -- https://www.baeldung.com/spring-rest-openapi-documentation
+
+
+7.  -- multi module project
+    -- What is JUnit  testing
+    -- White and Black box  //  QA
+    -- What is the advantages of unit testing
+    -- Parameterized tests junit-5
+    -- AssertJ  --
+
+    -- https://www.guru99.com/unit-testing-guide.html
+    -- https://www.softwaretestinghelp.com/junit-tutorial/#What_Is_Unit_Testing
+    -- https://blog.autify.com/what-is-unit-testing
+    -- https://medium.com/develooper/unit-testing-deep-dive-358600182439
+    -- https://medium.com/swlh/why-invest-in-unit-testing-8f1bdc2d688e
+    -- https://theqalead.com/test-management/unit-testing/
+    -- https://methodpoet.com/unit-testing-advantages-and-disadvantages/
+    -- https://semaphoreci.com/blog/unit-testing
+
+
+8.  -- What is mockito
+      Fake,
+      Spy,
+      Stub,
+      Mock
+      https://www.baeldung.com/mockito-spy  -- friday
+    -- What is mock, InjectMock, Spy  --
+    @Mock creates a mock.
+    @InjectMocks creates an instance of the class and injects the mocks that are created with the @Mock (or @Spy) annotations into this instance.
+
+    -- https://www.softwaretestinghelp.com/mockito-tutorial/
+    -- https://javarevisited.blogspot.com/2022/08/difference-between-mock-and-mockbean-in.html#axzz7msrk0Wln
+    -- https://mkyong.com/spring-boot/spring-boot-junit-5-mockito/
+    -- https://www.baeldung.com/mockito-void-methods   void methods
+    -- https://martinfowler.com/bliki/Yagni.html
+    -- https://en.wikipedia.org/wiki/Don%27t_repeat_yourself
+    -- https://en.wikipedia.org/wiki/KISS_principle
+    -- https://en.wikipedia.org/wiki/Occam%27s_razor
+
+9.  -- Unit 5 Parameterized Tests
+
+10. -- Testing the Web Layer
+    -- Integration testing
+    -- Unit testing with exception message ()-> LessonServiceTestImpl -
+
+11. Review
+
+-- https://www.guru99.com/docker-tutorial.html#2
+-- https://www.bmc.com/blogs/docker-101-introduction/
+-- https://intellipaat.com/blog/tutorial/devops-tutorial/docker-tutorial/
+-- https://intellipaat.com/blog/tutorial/devops-tutorial/docker-cheat-sheet/?utm_source=linkedin&utm_medium=organic&utm_campaign=posting
+
+docker containers
+docker ps
+docker ps -a
+docker rm container_id
+docker rm $(docker ps -aq)
+docker stop $(docker ps -aq)
+docker exec  -it (container_id )/ bin/sh. container qosulmaq ucun
+docker run  -d image_id - name <name> (-d)
+docker logs container_id
+docker inspect  container_id
+
+docker images
+docker rmi $(docker images -aq)
+docker system prune ( images and containeri silir. stop olanları)
+docker pull
+docker search
+
+Dockerfile
+docker build -t images_name:tag .
+docker push host
+docker volume
+docker network
+Docker. compose - image-> containers
+Docker file -> image
+
+Run        -----> build
+Entrypoint -----> run
+CMD        -----> run
+
+docker run --name some-mysql  -p 3307:3306 -e MYSQL_ROOT_PASSWORD=123456 -d  7b6f3978ca29
+  docker exec -it 5c235a8fba47  /bin/sh
+  #mysql -uuser -ppassword
+  # show databases;
+  # use db_name;
+
+Docker push --
+
+docker build -t 1234agil/ms13:1.3 .
+docker push 1234agil/ms13:1.3
+
+Docker run on local--
+docker build -t .
+docker run -p 7777:6787 ms-11
+docker run -d -p 8080:6787 882f163f2b74
+
+12. Introductions Databases types.
+       DDL – Data Definition Language
+       DQL – Data Query Language
+       DML – Data Manipulation Language
+       DCL – Data Control Language
+       TCL – Transaction Control Language
+
+       --------
+       DDL (Data Definition Language):
+       CREATE: This command is used to create the database or its objects (like table, index, function, views, store
+       procedure, and triggers).
+       DROP: This command is used to delete objects from the database.
+       ALTER: This is used to alter the structure of the database.
+       TRUNCATE: This is used to remove all records from a table, including all spaces allocated for the records are removed.
+       COMMENT: This is used to add comments to the data dictionary.
+       RENAME: This is used to rename an object existing in the database.
+
+       DQL - Data Query languages
+       SELECT: It is used to retrieve data from the database.
+       DML(Data Manipulation Language):
+       INSERT : It is used to insert data into a table.
+       UPDATE: It is used to update existing data within a table.
+       DELETE : It is used to delete records from a database table.
+       LOCK: Table control concurrency.
+       CALL: Call a PL/SQL or JAVA subprogram.
+       EXPLAIN PLAN: It describes the access path to data.
+       DCL (Data Control Language):
+       GRANT: This command gives users access privileges to the database.
+       REVOKE: This command withdraws the user’s access privileges given by using the GRANT command.
+
+       TCL (Transaction Control Language):
+       COMMIT: Commits a Transaction.
+       ROLLBACK: Rollbacks a transaction in case of any error occurs.
+       SAVEPOINT: Sets a save point within a transaction.
+       SET TRANSACTION: Specifies characteristics for the transaction.
+
+
+
+13. Mysql - 2
+    Introductions mysql
+    https://www.mysqltutorial.org
+    https://bedford-computing.co.uk/learning/wp-content/uploads/2015/09/mysql_tutorial.pdf
+
+
+14. 07/01/2023 Introductions  Liquibase
+    Talk about liquibase role on real projects.
+    https://www.liquibase.org/get-started
+    https://medium.com/codex/liquibase-tutorial-3ea08691a7a9
+    https://www.techgeeknext.com/spring-boot/spring-boot-liquibase-example
+
+    implement liquibase with Spring boot
+    enables configuration
+    hibernate ddl-auto: validate . wly?
+
+    - API first introductions
+    - wly we need API first ?
+    https://www.visual-paradigm.com/guide/development/code-first-vs-design-first/
+    https://www.infoq.com/articles/api-first-integration/
+    https://www.algolia.com/blog/product/the-5-principles-of-api-first-development-and-what-does-api-first-even-mean/
+    https://hub.packtpub.com/implementing-an-api-design-first-approach-for-building-apis/
+
+15. JPA - 1
+   JPA - persistence -
+   Eclipse link &  Hibernate:  her ikisi default olaraq JPA  implement edir
+   JPA implementations
+   EntityManagerFactory
+   EntityManager  - DBConnection + convenience methods wort with entities  persist()
+   Hibernate  EntityManagerFactory implementations;
+
+   SessionFactory sessionFactory;
+   SessionFactoryImpl sessionFactoryImpl;
+   Hibernate   EntityManager implementations;
+   Session session;
+   SessionImpl sessionImpl;  save() -sebeb , Hibernate  JPA-dan evvel olub ve sonra deyibler bunu standartlasdiraq
+
+  Spring Data
+  JPA
+  Hibernate
+   - Create entity , save data with Spring data repository
+   - Understand JPA Hibernate specifications
+   - What is EntityManagerFactory //
+   - What is EntityManager   // DBCooonection+ conbinues Entityes
+   - SessionFactory
+   - SessionFactoryImpl
+   - Session
+   - SessionImpl
+
+   JPA
+    -- EM (I)
+    -- EMF (I)
+   Hibernate
+    --Session (I)
+    --SF (I)
+    -- SessionImpl
+    --SessionFactoryImpl
+
+   SpringData methods examples
+
+16. JPA - 2 + Relationship
+   - One to one relationship.
+
+17.  21/01/2023
+   OneToOne
+    - one student  and one address
+   OneToMany
+     -one customer many account, cards so one owner many accounts
+   ManyToMany.
+     - many student many courses
+     - many users many group
+     - Mapping table need create
+   LAZY initialize exception:  get child getirdiğimizde  sebeb odur ki parent hansi
+   EntityManager  ile gelirse child-i o EntityManager- ile getirmek işteyim ve
+   EntityManager- already close olur ve exception bas verir.
+   @Transactional- neye gore getirir?  How we can solve this problem.
+
+   1. Entity graph
+   2. Native query Join FETCH
+   2. JPQL
+   3. JPA Streamer
+   5. Any other ideas are welcome.
+
+   1. Replace RuntimeException with Exception? Transaction was not  rollback, why?
+    - Transactional default olarak Runtime Exceptionlari rollback edir. Diğerleri  customer implement ve ya rollbackFor istifade ede bilerik..
+   2. Why with @SneakyThrows and checked exception, transaction rolled back?
+    - bu yazar butun exceptionlar Runtime exception olarak Show eder ve o zamanda rollback olacaqdir.
+   3. Why even if had @Transactional, and balance check, we could Withdraw 200 dollars?
+     - What is the name of problem ?
+   Hibernate proxy classes when created?
+
+
+
+18.   25.01.2023
+    -- non  Transactional
+    -- Transactional
+    -- with RunTimeException
+    -- with Checked Exception
+   ACID
+
+      https://www.sqlshack.com/dirty-reads-and-the-read-uncommitted-isolation-level/
+      https://dev.to/techschoolguru/understand-isolation-levels-read-phenomena-in-mysql-postgres-c2e
+      https://javabydeveloper.com/jpa-entity-lifecycle-jpa-developer-should-know/
+      https://dev.to/techschoolguru/understand-isolation-levels-read-phenomena-in-mysql-postgres-c2e
+      https://www.geeksforgeeks.org/transaction-isolation-levels-dbms/
+      https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth
+
+   4. How we can fix it?
+   @DinamicUpdate yazmaqla, Native query yazmaqla
+   @Column( nullable -false, updateAble false)
+
+   5. If this annotation is used in a method, it should be a public one.
+   Transactional does not for private methods
+
+   1. What is between difference Query and NamedQuery ? . With Person example.
+   2. Isolation Levels
+   3. Transactional with examples
+   4. what is thread safe in java --
+
+   19. 01/02/2023
+    -- Pagination
+    -- Sorting
+
+   21. 11/02/2023
+   1. Exception handler case for multiple service  must, Stand By database architecture implement
+   2. RollbackFor commands.
+   3. ReadOnly Transactional, Rac and standby database architecture
+   4. EntityManager cache Level L1 ,  wly not cache findAll()
+   5. Simulate ->  Why even if had @Transactional, and balance check, we could Withdraw 200 dollars?
+
+   22. 15/02/2023
+   1.Transactional implementation final - rollback/checked vs unchecked , CGLIB does not work by default, aspectJ you
+   2. Reference Taypes in java
+   3. Simulate ->  Why even if had @Transactional, and balance check, we could Withdraw 200 dollars?
+   4. second level cache
+   https://www.digitalocean.com/community/tutorials/spring-boot-redis-cache
+   https://iq.opengenus.org/caching-in-hibernate/
+   https://stackoverflow.com/questions/30795262/redis-serialization-and-deserialization
+   https://medium.com/@betul5634/redis-serialization-with-spring-redis-data-lettuce-codec-1a1d2bc73d26
+   https://architecturenotes.co/redis/
+
+   23. 22/02/2023
+   Locks;
+   https://www.google.com/search?client=safari&rls=en&q=optimistic+lock&ie=UTF-8&oe=UTF-8#imgrc=3RJq8Exg7_AVcM
+   create account service;
+   Talk about longing logback
+   findAccountById - Pessimistic read
+-- https://github.com/thombergs/code-examples--
+   24. JPA Final
+       - Cascade types - orphanRemoval --> https://stackoverflow.com/questions/18813341/what-is-the-difference-between-cascadetype-remove-and-orphanremoval-in-jpa
+       - JPA Specification -
+       - builder example  with constructors
+       - select 8 from student where name=? and id=?  ( what will be if id is null ? :)
+       - findAllStudentsNameLikeAndId
+       - describe filterApi on front size
+       - https://attacomsian.com/blog/spring-data-jpa-specifications
+       - https://www.ibm.com/docs/en/db2/11.5?topic=overview-optimistic-locking
+
+// https://stackoverflow.com/questions/71175593/how-does-jpa-entitygraph-allow-chosing-the-entity-graph-at-runtime
+// https://stackoverflow.com/questions/71175593/how-does-jpa-entitygraph-allow-chosing-the-entity-graph-at-runtime
+
+
+25.    08/03/2023
+      - Hikari configs
+      - Jmeter load test
+      --https://jmeter.apache.org
+      --https://www.baeldung.com/hikaricp
+      --https://www.javadevjournal.com/spring-boot/spring-boot-hikari/
+      --https://account.loadium.com/uaa/login
+
+
+26.    11/03/2023
+
+       1. Transaction Propagation
+          --https://www.baeldung.com/spring-transactional-propagation-isolation
+
+       2. Spring Security
+             - Authentication  - Who are you?
+             - Authorization     What  can you do?
+
+         - Authentication
+          * login/username-password
+          * LDAP
+
+         - Authorization
+           RBAC - Role Based Access Control
+           ABAC - Attribute Based Access Control
+           ACL  - Access Control Lists
+      - Security overview, web filters, in memory user
+      - https://www.marcobehler.com/guides/spring-security
+
+      User Details Service
+      Fully functional user details service
+      https://www.marcobehler.com/guides/spring-security
+      https://www.baeldung.com/spring-security-method-security
+
+      Implementation
+        User login from db;
+        1. Create UserDetailsServiceImpl imp  from UserDetailsService
+        2. Create User class impl UserDetails interface
+        3. Create UserAuthority imp Authority
+        4. Create UserRepository interface
+        5. Create PasswordEncoder bean.
+        6. Save user and do login (be happy everytime in your life)
+
+
+27. 15/03/2023
+    Example POST method with Auth
+    What is CSRF ?
+    - https://www.baeldung.com/spring-security-csrf
+    - Role Base access
+
+
+28. 18/03/2023
+    -- https://www.marcobehler.com/guides/spring-security
+    -- https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-servlet-context-hierarchy
+    -- https://louisjj.medium.com/spring-security-for-dummies-en-version-8f20c9c1e82e
+    -- https://louisjj.medium.com/spring-security-for-dummies-en-version-8f20c9c1e82e
+
+   JWT - introduction about JWT (Json web token  not Java web token)
+     1. - why do we need it in a microservices based application?
+     2. - Login lms take token an verify it.
+     3. - Create JwtService class where include issueToken and verifyToken methods
+     4. - Create JwtAuthFilter class where extends OncePerRequestFilter class and override doInternalFilter.
+     5. - Create JwtFilterConfigureAdaptor config addBeforeFilterChain
+     6. - Apply WebSecurityConfig class
+
+
+29. Refresh Token --
+   --https://www.spiceworks.com/tech/cloud/articles/stateful-vs-stateless/
+   -- Access token
+   -- Method security
+   -- https://www.baeldung.com/spring-security-method-security
+   -- https://www.openpolicyagent.org
+   -- https://www.keycloak.org
+
+
+
+--
+https://medium.com/javarevisited/10-java-stream-tips-must-read-2063a84af3be
+--
+
+30. 01/04/2023
+  - Prometheus
+  - Grafana
+  - https://refactorfirst.com/spring-boot-prometheus-grafana
+  - https://medium.com/@contactkumaramit9139/monitoring-spring-boot-applications-with-prometheus-and-grafana-21445260dad4
+  - https://www.techgeeknext.com/tools/docker/install-grafana-using-docker
+  - https://www.opsramp.com/guides/prometheus-monitoring/prometheus-vs-grafana/
+
+  What is Kafka?
+  For what case we need for Kafka?
+  Kafka store data binary
+  What is Producer ? write data to kafka
+  What is Consumer? read data from kafka
+
+  1. Event/message
+  2. Topic - table
+  3. Partition
+  4. Replica/Replication Factor
+  5. Consumer / Producer
+  6. Broker -> Node/Server
+  7. Binary
+
+  - https://www.confluent.io/learn/kafka-tutorial/
+  - https://www.baeldung.com/spring-kafka
+  - https://ssudan16.medium.com/kafka-internals-47e594e3f006
+  - https://stackoverflow.com/questions/47427948/how-to-acknowledge-current-offset-in-spring-kafka-for-manual-commit
+  - https://github.com/contactsunny/spring-kafka-test
+
+ALL review
+    Locks
+    ACID -> Atomicity Consistency Isolation Durability
+    Isolation-> Read Uncommied Read Commited RR Serializable
+    Dirty Read -> RU,
+    PR -> serializable
+    NRR-> un-commied commited
+    @Transactional -> EM-> open managed, perist
+    repo.save();  -> finally commit, flush
+    no rollback, rollback for,
+    does not work within the same class, CG Lib, AspectJ
+    L1 EM (Weak), L2 EMF (Soft)
+    Strong, Weak, Soft, Phantom  EM, EMF, SessionImp, SessionFactoryImpl.
+    BeanAwerLocal -> homework
+    findAll -> why not cached?
+    Phantom reference -> why it was not found in ref queue
+    Readonly homework AspectJ
+    Level 2 cache enabled
+
+   1. ModelMapper  - How does  working?
+   2. L1 cache WeekReference ?
+   3. EM and EMF cache flow. EMF cache long live use L2 softReference. EM -L1 weak reference type, no longer
+   4.DoTransfer  locks
+   5.cascade types
+   6.many to one save repository.
+   7. Application server  -  200 f.e thead   connection tool.
+   Throughput = thread count/ response time.
+   for exam response time 1 min // 200 request per minute.
+   multi microservice thread working time.
+   https://www.infoq.com/articles/engstrand-microservice-threading/
+   blocking and nonblocking
+   Entity manager close olmasa -- ne bas verecek ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

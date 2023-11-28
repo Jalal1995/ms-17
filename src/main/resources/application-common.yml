@@ -1,0 +1,22 @@
+server:
+  port: ${SERVER_PORT:9090}
+
+has:
+  account: ${HAS_ACCOUNT:true}
+
+student:
+    names:
+     - Turan
+     - Ahmad
+     - Celal
+
+
+spring:
+  main:
+    allow-circular-references: true
+
+
+
+logging:
+  level:
+    com.example.ms17: TRACE
